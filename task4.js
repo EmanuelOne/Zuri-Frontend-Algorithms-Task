@@ -27,11 +27,10 @@ function checkYuGiOh(n) {
   }
 }
 
-
 function convertFahrToCelsius(f) {
   let c = (((f - 32) * 5) / 9).toFixed(4);
   if (c === "NaN")
-    return `${f}, "is not a valid number but ${
+    return `${JSON.stringify(f)}, "is not a valid number but ${
       Array.isArray(f) ? "an" : "a"
     }", ${Array.isArray(f) ? "Array" : "Object"}`;
   else return c;
